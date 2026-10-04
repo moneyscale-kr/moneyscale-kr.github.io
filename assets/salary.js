@@ -13,7 +13,7 @@ const chipVals=[[3000,"3천"],[5000,"5천"],[7000,"7천"],[10000,"1억"],[20000,
 $("chips").innerHTML = chipVals.map(([v,l])=>`<button type="button" class="chip" data-v="${v}">${l}</button>`).join("");
 $("chips").onclick = (e)=>{ const v=e.target.dataset.v; if(v){ $("sal").value=v; update(true);} };
 $("sal").addEventListener("input", ()=>{ const el=$("sal"); const d=el.value.replace(/[^0-9]/g,""); el.value = d? MS.nf(+d):""; update(true); });
-const spicyFor = (p)=> p<=1 ? "이건 평균이 아니라 꼭대기예요" : p<=3 ? "친구들 사이에서도 손에 꼽혀요" : p<=10 ? "억대 문턱 근처, 상위 10%예요" : p<=30 ? "상위권, 근데 위에 아직 많아요" : p<=50 ? "딱 가운데보다 위예요" : p<=65 ? "평균엔 못 미치지만 절반은 넘겨요" : "숫자는 숫자일 뿐, 월급은 오르니까요";
+const spicyFor = (p)=> p<=1 ? "이건 평균이 아니라 꼭대기예요" : p<=3 ? "친구들 사이에서도 손에 꼽혀요" : p<=10 ? "상위 10% 안쪽, 억대 문턱이에요" : p<=30 ? "상위권, 근데 위에 아직 많아요" : p<=50 ? "딱 가운데보다 위예요" : p<=65 ? "평균엔 못 미치지만 절반은 넘겨요" : "숫자는 숫자일 뿐, 월급은 오르니까요";
 let cur=null;
 function compute(sal){
   const r = percentile(sal), p = r.p;
