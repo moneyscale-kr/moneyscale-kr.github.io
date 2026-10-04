@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>월급 실수령액 계산기 2026 (4대보험·간이세액표) | 돈의 스케일</title>
+<meta name="description" content="세전 월급·연봉을 넣으면 2026년 4대보험과 소득세(간이세액표)를 뺀 예상 실수령액을 계산해요. 요율 출처와 근사치 안내, 예시표, FAQ 포함.">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="canonical" href="https://moneyscale-kr.github.io/take-home/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="돈의 스케일">
+<meta property="og:title" content="월급 실수령액 계산기 2026 (4대보험·간이세액표) | 돈의 스케일"><meta property="og:description" content="세전 월급·연봉을 넣으면 2026년 4대보험과 소득세(간이세액표)를 뺀 예상 실수령액을 계산해요. 요율 출처와 근사치 안내, 예시표, FAQ 포함.">
+<meta property="og:url" content="https://moneyscale-kr.github.io/take-home/"><meta property="og:image" content="https://moneyscale-kr.github.io/assets/og-home.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<!-- 사이트 소유확인(발급 후 주석 해제하고 content 채우기)
+<meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE">
+<meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE">
+-->
+<!-- ADSENSE(승인 후 주석 해제): <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<!-- ANALYTICS: 아직 없음. 도입하면 개인정보처리방침(/privacy/)도 함께 갱신 -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://moneyscale-kr.github.io/"},{"@type":"ListItem","position":2,"name":"월급 실수령액 계산기","item":"https://moneyscale-kr.github.io/take-home/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"실수령액이 명세서와 다른 이유는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"회사별 비과세 항목, 건강보험 정산, 상여금 달의 세액 정산, 요율 적용 시점 차이 때문이에요. 이 계산기는 월 고정급 기준의 근사치예요."}},{"@type":"Question","name":"2026년 4대보험 요율은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"근로자 부담 기준으로 국민연금 4.75%, 건강보험 3.595%, 장기요양보험은 건강보험료의 13.14%, 고용보험 0.9%예요. 국민연금 기준소득월액은 2026년 7월부터 하한 41만 원, 상한 659만 원이에요."}},{"@type":"Question","name":"간이세액표는 무엇인가요?","acceptedAnswer":{"@type":"Answer","text":"회사가 매달 월급에서 소득세를 미리 떼는 기준표예요(소득세법 시행령 별표 2). 연말정산에서 실제 세금과 비교해 환급하거나 더 내요. 그래서 한 해 총세금이 아니라 매달 떼는 금액의 기준이에요."}},{"@type":"Question","name":"비과세 식대는 얼마까지인가요?","acceptedAnswer":{"@type":"Answer","text":"월 20만 원까지 비과세예요(소득세법 시행령 제12조). 회사가 식대를 따로 지급하지 않으면 0원으로 입력하세요."}},{"@type":"Question","name":"8~20세 자녀가 있으면 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"간이세액표 안내에 따라 자녀 1명 20,830원, 2명 45,830원, 3명 이상은 45,830원에 2명 초과 자녀 1명당 33,330원을 소득세에서 빼요. 이 금액은 2026년 3월 1일 이후 원천징수분부터 적용돼요."}}]}</script>
+</head><body><div class="wrap">
+<div class="top"><a class="brand" href="../">돈의 스케일<i>.</i></a><a href="../" style="font-size:13px">계산기 목록</a></div>
+<h1>월급 <em>실수령액</em><br>얼마일까?</h1>
+<p class="sub">2026 4대보험 + 간이세액표 기준 추정. 세전 월급만 넣으면 돼요.</p>
+<div class="seg" id="mode" style="margin-bottom:6px"><button type="button" data-v="m" aria-pressed="true">월 급여</button><button type="button" data-v="y" aria-pressed="false">연봉</button></div>
+<label for="sal" id="lab">월 급여 (세전)</label>
+<div class="field"><input id="sal" inputmode="numeric" autocomplete="off" placeholder="300" aria-label="세전 금액 만원"><span>만 원</span></div>
+<div class="chips" id="chips"></div>
+<label for="nt">비과세 (식대 등, 월)</label>
+<div class="field"><input id="nt" inputmode="numeric" autocomplete="off" placeholder="20" aria-label="비과세 금액 만원"><span>만 원</span></div>
+<div class="two"><div><label for="fam">공제대상가족 (본인 포함)</label><select id="fam"></select></div><div><label for="kid">8~20세 자녀</label><select id="kid"></select></div></div>
+<section class="res" id="res" hidden aria-live="polite">
+ <div class="big" id="big"></div><div class="spicy" id="spicy"></div>
+ <div class="bar"><b id="bar"></b></div>
+ <ul class="cmp" id="cmp"></ul>
+ <table class="t" id="tbl"></table>
+ <canvas id="card" class="cardprev" width="1080" height="1350" aria-label="공유용 결과 카드"></canvas>
+ <div class="btns"><button class="btn" id="btn-share">카드 공유</button><button class="btn alt" id="btn-save">PNG 저장</button><button class="btn alt" id="btn-copy">링크 복사</button></div>
+ <div class="toast" id="toast" role="status"></div>
+</section>
+<div class="src"><b>출처</b> 국세청 근로소득 간이세액표(소득세법 시행령 별표 2, 2026.2.27 개정), 국민연금·건강보험·고용보험 2026년 요율.
+<div class="warn"><b>근사치예요.</b> 회사별 비과세·정산·연말정산에 따라 실제 명세서와 다를 수 있어요. 참고용이며 세법·요율 변경 가능.</div></div>
+<article class="doc"><h2>월급에서 무엇이 얼마나 빠지나요</h2>
+<p>월급명세서의 &ldquo;공제&rdquo; 항목은 크게 4대보험(국민연금·건강보험·장기요양보험·고용보험)과 세금(소득세·지방소득세)으로 나뉘어요. 이 계산기는 세전 월 급여에서 비과세 식대를 뺀 금액을 기준으로 각 항목을 계산하고, 남는 금액을 예상 실수령액으로 보여줘요. 산재보험은 사업주가 전액 부담해서 근로자 공제에 없어요.</p>
+<p>2026년 근로자 부담 요율은 국민연금 4.75%(보험료율 9.5%를 노사가 절반씩, 기준소득월액 하한 41만 원·상한 659만 원), 건강보험 3.595%(7.19%의 절반), 장기요양보험은 건강보험료의 13.14%, 고용보험(실업급여) 0.9%예요. 소득세는 국세청 「근로소득 간이세액표」(소득세법 시행령 별표 2, 2026.2.27 개정)의 월급여·공제대상가족 수별 금액을 그대로 쓰고, 8~20세 자녀가 있으면 표 안내대로 자녀 수에 따른 금액을 빼요. 지방소득세는 소득세의 10%예요. 각 보험료는 10원 미만을 절사했어요.</p>
+<p>이 값은 매달 회사가 <b>원천징수하는 금액</b>과 비슷하도록 만든 추정치예요. 실제 명세서와 다를 수 있는 이유는 여러 가지예요. 회사가 건강보험 보수월액을 전년 기준으로 정산하는 경우, 식대 외 비과세(차량유지비, 육아수당 등), 상여금·성과급이 있는 달의 세액 정산, 4대보험 요율 변경 시점, 연금·건보료 상·하한, 연말정산 결과(환급·추가납부)가 그래요. 간이세액표는 연말정산 때 정산을 전제로 미리 떼는 금액이라, 이 계산기의 소득세는 최종 결정세액과 같지 않아요.</p>
+<h3>이직·협상 때 쓰는 법</h3><p>연봉 협상이나 이직 제안을 비교할 때 세전 금액만 보면 실제 생활비와 거리가 생겨요. 식대 같은 비과세 항목이 많은 회사는 같은 세전 금액이라도 보험료와 세금이 적어 실수령이 더 높을 수 있어요. 4대보험은 직장가입자 기준이라 프리랜서나 지역가입자는 보험료 계산이 달라요. 연말정산에서 신용카드·의료비·교육비 공제를 받으면 이미 낸 소득세가 환급될 수도 있어요. 가족 수를 바꾸면 소득세가 크게 달라지는 점도 직접 확인해 보세요.</p><h3>월 급여별 예상 실수령 예시 (본인 1명, 비과세 식대 20만 원)</h3><div class="tw"><table class="t ex"><caption>2026년 요율, 간이세액표(2026.2.27 개정) 기준 추정</caption><thead><tr><th>월 급여(세전)</th><th>4대보험</th><th>소득세·지방세</th><th>예상 실수령</th></tr></thead><tbody><tr><td>250만 원</td><td>223,490원</td><td>32,070원</td><td><b>2,244,440원</b></td></tr><tr><td>300만 원</td><td>272,080원</td><td>62,480원</td><td><b>2,665,440원</b></td></tr><tr><td>350만 원</td><td>320,660원</td><td>113,040원</td><td><b>3,066,300원</b></td></tr><tr><td>400만 원</td><td>369,260원</td><td>186,180원</td><td><b>3,444,560원</b></td></tr><tr><td>500만 원</td><td>466,430원</td><td>338,160원</td><td><b>4,195,410원</b></td></tr><tr><td>700만 원</td><td>650,800원</td><td>756,070원</td><td><b>5,593,130원</b></td></tr></tbody></table></div>
+<p class="note">연봉으로 입력하면 12로 나눈 월 급여로 계산해요(상여금이 따로 있으면 달마다 달라져요). 공무원은 국민연금 대신 공무원연금 기여금을 내므로 이 계산기 대상이 아니에요. 공무원 보수는 <a href="../civil-pay/">공무원 월급 조회</a>를 참고하세요.</p>
+<div class="disc" role="note"><b>꼭 읽어주세요</b> 이 페이지의 결과는 <b>참고용 추정치</b>예요. 세법·4대보험 요율·통계 기준은 바뀔 수 있고 개인 상황(부양가족, 공제, 상여, 소득 종류 등)에 따라 실제와 달라요. 이 계산기는 간이세액표 기반 근사치예요. 특정 금융상품·투자에 대한 권유나 세무·법률 자문이 아니에요.</div></article><section class="doc"><h2>자주 묻는 질문</h2><details class="faq"><summary>실수령액이 명세서와 다른 이유는 무엇인가요?</summary><p>회사별 비과세 항목, 건강보험 정산, 상여금 달의 세액 정산, 요율 적용 시점 차이 때문이에요. 이 계산기는 월 고정급 기준의 근사치예요.</p></details><details class="faq"><summary>2026년 4대보험 요율은 얼마인가요?</summary><p>근로자 부담 기준으로 국민연금 4.75%, 건강보험 3.595%, 장기요양보험은 건강보험료의 13.14%, 고용보험 0.9%예요. 국민연금 기준소득월액은 2026년 7월부터 하한 41만 원, 상한 659만 원이에요.</p></details><details class="faq"><summary>간이세액표는 무엇인가요?</summary><p>회사가 매달 월급에서 소득세를 미리 떼는 기준표예요(소득세법 시행령 별표 2). 연말정산에서 실제 세금과 비교해 환급하거나 더 내요. 그래서 한 해 총세금이 아니라 매달 떼는 금액의 기준이에요.</p></details><details class="faq"><summary>비과세 식대는 얼마까지인가요?</summary><p>월 20만 원까지 비과세예요(소득세법 시행령 제12조). 회사가 식대를 따로 지급하지 않으면 0원으로 입력하세요.</p></details><details class="faq"><summary>8~20세 자녀가 있으면 어떻게 계산하나요?</summary><p>간이세액표 안내에 따라 자녀 1명 20,830원, 2명 45,830원, 3명 이상은 45,830원에 2명 초과 자녀 1명당 33,330원을 소득세에서 빼요. 이 금액은 2026년 3월 1일 이후 원천징수분부터 적용돼요.</p></details></section><section class="doc"><h2>출처와 기준</h2><ul class="srcs"><li><a href="https://www.nts.go.kr/nts/cm/cntnts/cntntsView.do?mi=6583&cntntsId=7862" rel="noopener nofollow">국세청 근로소득 원천징수방법(간이세액표) / 소득세법 시행령 별표 2 <개정 2026.2.27></a> <span>(2026-03-01 이후 원천징수분)</span></li><li><a href="https://www.nps.or.kr/" rel="noopener nofollow">국민연금공단 연금보험료 안내(보험료율 9.5%, 기준소득월액 상·하한)</a> <span>(2026년, 상·하한은 2026.7~2027.6)</span></li><li><a href="https://www.nhis.or.kr/" rel="noopener nofollow">국민건강보험공단 보험료율(건강보험 7.19%, 장기요양 13.14%)</a> <span>(2026년)</span></li><li><a href="https://www.comwel.or.kr/" rel="noopener nofollow">근로복지공단 고용·산재보험 안내(고용보험 실업급여 근로자 0.9%)</a> <span>(2026년)</span></li></ul><p class="note">숫자는 위 공개 자료를 바탕으로 편집팀이 계산했어요. 최종 업데이트 2026-10-05.</p></section>
+<script src="../assets/common.js"></script><script src="../assets/takehome-core.js"></script><script src="../assets/takehome.js"></script>
+<footer><nav aria-label="사이트 정보"><a href="../">계산기 목록</a><a href="../about/">소개</a><a href="../contact/">문의</a><a href="../privacy/">개인정보처리방침</a><a href="https://www.youtube.com/@돈의스케일" rel="noopener">YouTube</a><a href="https://www.instagram.com/money.scale.kr/" rel="noopener">Instagram</a></nav>
+<p>참고용 정보예요. 세법·보험요율·통계는 바뀔 수 있고, 투자·대출·보험 등 금융상품을 권유하지 않아요. 중요한 결정 전에는 국세청·공단·전문가에게 확인하세요.</p>
+<p>&copy; 2026 돈의 스케일 편집팀 · <a href="mailto:scienceydsus+github-moneyscale@gmail.com">scienceydsus+github-moneyscale@gmail.com</a></p></footer>
+</div>
+</body></html>

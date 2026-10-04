@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://moneyscale-kr.github.io/</loc></url>
-<url><loc>https://moneyscale-kr.github.io/salary-rank/</loc></url>
-<url><loc>https://moneyscale-kr.github.io/apartment-years/</loc></url>
+<url><loc>https://moneyscale-kr.github.io/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/salary-rank/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/apartment-years/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/take-home/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/civil-pay/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/downloads/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/about/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/contact/</loc><lastmod>2026-10-05</lastmod></url>
+<url><loc>https://moneyscale-kr.github.io/privacy/</loc><lastmod>2026-10-05</lastmod></url>
 </urlset>

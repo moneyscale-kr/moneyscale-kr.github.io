@@ -2,7 +2,7 @@
 <html lang="ko"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>내 연봉, 대한민국 상위 몇 %? | 돈의 스케일</title>
-<meta name="description" content="연봉(세전)을 넣으면 국세청 2024년 귀속 근로소득 통계로 상위 몇 %인지 계산해요. 결과 카드 공유 가능.">
+<meta name="description" content="연봉(세전)을 넣으면 국세청 2024년 귀속 근로소득 통계로 상위 몇 %인지 계산해요. 연봉별 위치 예시표, 계산 방법, FAQ, 출처까지 한 페이지에.">
 <meta name="theme-color" content="#0b0b0f">
 <link rel="canonical" href="https://moneyscale-kr.github.io/salary-rank/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="돈의 스케일">
@@ -15,6 +15,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 <!-- ANALYTICS: 아직 없음. 추적 스크립트는 여기에 추가 -->
+
+
+
+<!--HX--><!-- 사이트 소유확인(발급 후 주석 해제하고 content 채우기)
+<meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE">
+<meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE">
+-->
+<!-- ADSENSE(승인 후 주석 해제): <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> --><!--/HX--><!--LD--><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://moneyscale-kr.github.io/"},{"@type":"ListItem","position":2,"name":"내 연봉 상위 몇 %","item":"https://moneyscale-kr.github.io/salary-rank/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"연봉에 성과급과 비과세 식대는 포함하나요?","acceptedAnswer":{"@type":"Answer","text":"성과급·상여금은 총급여에 포함돼 연봉에 넣어 계산하고, 식대(월 20만 원 한도) 같은 비과세 소득은 총급여에서 빠져요. 세전 총급여 기준으로 입력하세요."}},{"@type":"Question","name":"실수령액을 넣어도 되나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 이 계산기는 세전 총급여 기준이에요. 실수령액은 4대보험과 세금이 빠진 금액이라 순위가 실제보다 낮게 나와요. 월급만 알면 실수령액 계산기에서 세전 금액을 먼저 확인할 수 있어요."}},{"@type":"Question","name":"국세청이 발표한 숫자와 왜 조금 달라요?","acceptedAnswer":{"@type":"Answer","text":"국세청은 구간별 평균만 공개해서 이 계산기는 구간 사이를 직선으로 이어 추정해요. 구간 안의 실제 분포를 모르기 때문에 조금씩 차이가 날 수 있어요."}},{"@type":"Question","name":"프리랜서나 자영업자도 비교할 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"아니요. 근로소득 연말정산 대상자만 포함한 통계예요. 사업소득·금융소득·임대소득은 반영되지 않아요."}},{"@type":"Question","name":"상위 10%는 연봉이 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"이 통계로 추정하면 상위 10%의 문턱은 약 8,900만 원이에요. 통계가 새로 공개되면 숫자는 바뀔 수 있어요."}}]}</script><!--/LD-->
 </head><body><div class="wrap">
 <div class="top"><a class="brand" href="../">돈의 스케일<i>.</i></a><a href="../" style="font-size:13px">계산기 목록</a></div>
 <h1>내 연봉,<br>대한민국 <em>상위 몇 %?</em></h1>
@@ -31,8 +40,19 @@
  <div class="toast" id="toast" role="status"></div>
 </section>
 <div class="src" id="src"></div>
+<!--DOC--><article class="doc"><h2>연봉 상위 %, 이렇게 계산하고 이렇게 읽어요</h2>
+<p>국세청은 매년 연말정산을 한 근로소득자를 총급여 순서로 줄 세운 뒤 1%(상·하위 끝은 0.1%) 단위로 나누고, 구간마다 평균 총급여를 공개해요. 이 계산기는 그 구간 평균을 구간의 한가운데 백분위에 놓고 점 사이를 직선으로 이어서, 입력한 연봉이 줄 서기의 어디쯤인지 추정해요. 2024년 귀속 자료 기준 대상자는 약 2,108만 명이고, 전체 평균은 4,475만 원, 가운데 값(중위)은 약 3,387만 원이에요.</p>
+<p>여기서 말하는 연봉은 세전 <b>총급여</b>예요. 상여금·성과급·각종 수당은 들어가고, 식대(월 20만 원 한도) 같은 비과세 소득은 빠져요. 그래서 연봉 계약서의 숫자와 연말정산 서류의 총급여가 다를 수 있어요. 통장에 찍히는 실수령액이 궁금하면 <a href="../take-home/">실수령액 계산기</a>를 이용해 보세요.</p>
+<p>해석할 때 알아둘 점이 있어요. 첫째, 대상은 근로소득자뿐이라 자영업자·프리랜서·임대·금융소득은 들어 있지 않아요. 둘째, 한 해 중간에 입사·퇴사한 사람과 단기 근로자도 한 명으로 세기 때문에 풀타임 환산 연봉보다 분포가 낮게 나와요. 셋째, 개인 기준이라 가구 소득이나 소비 여력과는 별개예요. 넷째, 구간 안의 분포는 모르기 때문에 보간 결과는 몇 퍼센트포인트 정도의 오차가 날 수 있어요(특히 최상위 구간). 상위 몇 %라는 숫자는 삶의 성적표가 아니라 통계상의 위치일 뿐이에요.</p>
+<h3>이 숫자를 쓰는 법</h3><p>평균 연봉이 중위 연봉보다 높은 건 소수의 고연봉자가 평균을 끌어올리기 때문이에요. 그래서 &ldquo;나는 평균보다 낮다&rdquo;보다 &ldquo;중위의 몇 배인가&rdquo;가 내 위치를 더 잘 보여줘요. 이직·연봉 협상을 준비한다면 같은 연차·직무의 시장 데이터와 함께 보고, 성과급이 큰 직군은 세전 총급여를 기준으로 비교하세요. 연봉이 올라도 4대보험과 세금이 함께 늘어서 손에 쥐는 돈의 증가폭은 더 작아요. 이 통계는 해마다 갱신되므로 작년 위치와 비교할 때는 같은 기준(귀속연도)인지 확인하는 것이 좋아요. 또 근로소득자만 모은 통계라서 가구 단위의 생활 수준이나 자산 규모와는 직접 연결하지 않는 편이 안전해요.</p><h3>연봉별 상위 % 예시 (추정)</h3><div class="tw"><table class="t ex"><caption>기준: 국세청 2024년 귀속 근로소득 백분위 자료</caption><thead><tr><th>연봉(세전)</th><th>상위 위치</th></tr></thead><tbody><tr><td>2,400만 원</td><td>상위 약 69%</td></tr><tr><td>3,000만 원</td><td>상위 약 57%</td></tr><tr><td>4,000만 원</td><td>상위 약 41%</td></tr><tr><td>5,000만 원</td><td>상위 약 30%</td></tr><tr><td>6,000만 원</td><td>상위 약 23%</td></tr><tr><td>7,000만 원</td><td>상위 약 17%</td></tr><tr><td>10,000만 원</td><td>상위 약 7.4%</td></tr><tr><td>15,000만 원</td><td>상위 약 2.4%</td></tr></tbody></table></div>
+<h3>상위 구간의 연봉 문턱 (추정)</h3><div class="tw"><table class="t ex"><thead><tr><th>위치</th><th>연봉 문턱</th></tr></thead><tbody><tr><td>상위 1%</td><td>약 19,700만 원</td></tr><tr><td>상위 5%</td><td>약 11,600만 원</td></tr><tr><td>상위 10%</td><td>약 8,900만 원</td></tr><tr><td>상위 20%</td><td>약 6,400만 원</td></tr><tr><td>상위 30%</td><td>약 5,000만 원</td></tr><tr><td>상위 50%</td><td>약 3,400만 원</td></tr></tbody></table></div>
+<div class="disc" role="note"><b>꼭 읽어주세요</b> 이 페이지의 결과는 <b>참고용 추정치</b>예요. 세법·4대보험 요율·통계 기준은 바뀔 수 있고 개인 상황(부양가족, 공제, 상여, 소득 종류 등)에 따라 실제와 달라요. 1억 원이 약 상위 7%라는 식의 표현은 구간 평균을 이어 붙인 추정이에요. 특정 금융상품·투자에 대한 권유나 세무·법률 자문이 아니에요.</div></article><section class="doc"><h2>자주 묻는 질문</h2><details class="faq"><summary>연봉에 성과급과 비과세 식대는 포함하나요?</summary><p>성과급·상여금은 총급여에 포함돼 연봉에 넣어 계산하고, 식대(월 20만 원 한도) 같은 비과세 소득은 총급여에서 빠져요. 세전 총급여 기준으로 입력하세요.</p></details><details class="faq"><summary>실수령액을 넣어도 되나요?</summary><p>아니요. 이 계산기는 세전 총급여 기준이에요. 실수령액은 4대보험과 세금이 빠진 금액이라 순위가 실제보다 낮게 나와요. 월급만 알면 실수령액 계산기에서 세전 금액을 먼저 확인할 수 있어요.</p></details><details class="faq"><summary>국세청이 발표한 숫자와 왜 조금 달라요?</summary><p>국세청은 구간별 평균만 공개해서 이 계산기는 구간 사이를 직선으로 이어 추정해요. 구간 안의 실제 분포를 모르기 때문에 조금씩 차이가 날 수 있어요.</p></details><details class="faq"><summary>프리랜서나 자영업자도 비교할 수 있나요?</summary><p>아니요. 근로소득 연말정산 대상자만 포함한 통계예요. 사업소득·금융소득·임대소득은 반영되지 않아요.</p></details><details class="faq"><summary>상위 10%는 연봉이 얼마인가요?</summary><p>이 통계로 추정하면 상위 10%의 문턱은 약 8,900만 원이에요. 통계가 새로 공개되면 숫자는 바뀔 수 있어요.</p></details></section><section class="doc"><h2>출처와 기준</h2><ul class="srcs"><li><a href="https://www.data.go.kr/data/15082063/fileData.do" rel="noopener nofollow">국세청 국세통계 「근로소득 백분위(천분위) 자료」(공공데이터포털 15082063)</a> <span>(2024년 귀속, 2025.12 공개)</span></li><li><a href="https://mods.go.kr/" rel="noopener nofollow">국가데이터처(구 통계청) 「임금근로일자리 소득(보수) 결과」(참고 비교)</a> <span>(2024년 12월 기준, 2026.2 발표)</span></li></ul><p class="note">숫자는 위 공개 자료를 바탕으로 편집팀이 계산했어요. 최종 업데이트 2026-10-05.</p></section><!--/DOC-->
+
+
+
 <script src="../assets/common.js"></script><script src="../assets/salary.js"></script>
-<footer><a href="../">계산기 목록</a><a href="https://www.youtube.com/@돈의스케일" rel="noopener">YouTube</a><a href="https://www.instagram.com/money.scale.kr/" rel="noopener">Instagram</a>
-<p>투자 권유 아님 · 추정치예요. 공개 통계로 계산한 참고용 숫자입니다.</p></footer>
+<footer><nav aria-label="사이트 정보"><a href="../">계산기 목록</a><a href="../about/">소개</a><a href="../contact/">문의</a><a href="../privacy/">개인정보처리방침</a><a href="https://www.youtube.com/@돈의스케일" rel="noopener">YouTube</a><a href="https://www.instagram.com/money.scale.kr/" rel="noopener">Instagram</a></nav>
+<p>참고용 정보예요. 세법·보험요율·통계는 바뀔 수 있고, 투자·대출·보험 등 금융상품을 권유하지 않아요. 중요한 결정 전에는 국세청·공단·전문가에게 확인하세요.</p>
+<p>&copy; 2026 돈의 스케일 편집팀 · <a href="mailto:scienceydsus+github-moneyscale@gmail.com">scienceydsus+github-moneyscale@gmail.com</a></p></footer>
 </div>
 </body></html>
