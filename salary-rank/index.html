@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>내 연봉, 대한민국 상위 몇 %? | 돈의 스케일</title>
+<meta name="description" content="연봉(세전)을 넣으면 국세청 2024년 귀속 근로소득 통계로 상위 몇 %인지 계산해요. 결과 카드 공유 가능.">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="canonical" href="https://SITE_URL/salary-rank/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="돈의 스케일">
+<meta property="og:title" content="내 연봉, 대한민국 상위 몇 %? | 돈의 스케일"><meta property="og:description" content="연봉(세전)을 넣으면 국세청 2024년 귀속 근로소득 통계로 상위 몇 %인지 계산해요. 결과 카드 공유 가능.">
+<meta property="og:url" content="https://SITE_URL/salary-rank/"><meta property="og:image" content="https://SITE_URL/assets/og-salary.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<!-- ANALYTICS: 아직 없음. 추적 스크립트는 여기에 추가 -->
+</head><body><div class="wrap">
+<div class="top"><a class="brand" href="../">돈의 스케일<i>.</i></a><a href="../" style="font-size:13px">계산기 목록</a></div>
+<h1>내 연봉,<br>대한민국 <em>상위 몇 %?</em></h1>
+<p class="sub">근로소득 연말정산 신고자 2,108만 명 기준 (2024년 귀속).</p>
+<label for="sal">연봉 (세전 총급여)</label>
+<div class="field"><input id="sal" inputmode="numeric" autocomplete="off" placeholder="5000" aria-label="연봉 만원"><span>만 원</span></div>
+<div class="chips" id="chips"></div>
+<section class="res" id="res" hidden aria-live="polite">
+ <div class="big" id="big"></div><div class="spicy" id="spicy"></div>
+ <div class="barlab"><span>상위</span><span>하위</span></div><div class="bar"><b id="bar"></b></div>
+ <ul class="cmp" id="cmp"></ul>
+ <canvas id="card" class="cardprev" width="1080" height="1350" aria-label="공유용 결과 카드"></canvas>
+ <div class="btns"><button class="btn" id="btn-share">카드 공유</button><button class="btn alt" id="btn-save">PNG 저장</button><button class="btn alt" id="btn-copy">링크 복사</button></div>
+ <div class="toast" id="toast" role="status"></div>
+</section>
+<div class="src" id="src"></div>
+<script src="../assets/common.js"></script><script src="../assets/salary.js"></script>
+<footer><a href="../">계산기 목록</a><a href="https://www.youtube.com/@돈의스케일" rel="noopener">YouTube</a><a href="https://www.instagram.com/money.scale.kr/" rel="noopener">Instagram</a>
+<p>투자 권유 아님 · 추정치예요. 공개 통계로 계산한 참고용 숫자입니다.</p></footer>
+</div>
+</body></html>
