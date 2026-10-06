@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>대출 이자 계산기 (원리금균등·원금균등·만기일시, 월별 상환표) | 돈의 스케일</title>
+<meta name="description" content="대출금·금리·기간을 넣으면 원리금균등, 원금균등, 만기일시 세 가지 상환 방식의 월 납입액, 총이자, 월별 상환 스케줄을 계산해요. 계산식과 비교표 공개.">
+<meta name="theme-color" content="#0b0b0f">
+<link rel="canonical" href="https://moneyscale-kr.github.io/loan-interest/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="돈의 스케일">
+<meta property="og:title" content="대출 이자 계산기 (원리금균등·원금균등·만기일시, 월별 상환표) | 돈의 스케일"><meta property="og:description" content="대출금·금리·기간을 넣으면 원리금균등, 원금균등, 만기일시 세 가지 상환 방식의 월 납입액, 총이자, 월별 상환 스케줄을 계산해요. 계산식과 비교표 공개.">
+<meta property="og:url" content="https://moneyscale-kr.github.io/loan-interest/"><meta property="og:image" content="https://moneyscale-kr.github.io/assets/og-home.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+<!-- 사이트 소유확인(발급 후 주석 해제하고 content 채우기)
+<meta name="google-site-verification" content="GOOGLE_VERIFICATION_CODE">
+<meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE">
+-->
+<!-- ADSENSE(승인 후 주석 해제): <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"홈","item":"https://moneyscale-kr.github.io/"},{"@type":"ListItem","position":2,"name":"대출 이자 계산기 2026","item":"https://moneyscale-kr.github.io/loan-interest/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"대출 이자 계산기 2026","url":"https://moneyscale-kr.github.io/loan-interest/","description":"대출금·금리·기간을 넣으면 원리금균등, 원금균등, 만기일시 세 가지 상환 방식의 월 납입액, 총이자, 월별 상환 스케줄을 계산해요. 계산식과 비교표 공개.","applicationCategory":"FinanceApplication","operatingSystem":"Any","inLanguage":"ko-KR","offers":{"@type":"Offer","price":"0","priceCurrency":"KRW"},"publisher":{"@type":"Organization","name":"돈의 스케일","url":"https://moneyscale-kr.github.io/"},"dateModified":"2026-10-07"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"원리금균등과 원금균등 중 어느 쪽이 이자가 적나요?","acceptedAnswer":{"@type":"Answer","text":"같은 조건이면 원금균등의 총이자가 더 적어요. 원금을 처음부터 일정하게 갚아 잔액이 빨리 줄기 때문이에요. 대신 초기 월 납입액이 더 커요."}},{"@type":"Question","name":"원리금균등 월 납입액은 어떻게 계산하나요?","acceptedAnswer":{"@type":"Answer","text":"월 납입액 = 원금 x r / (1 - (1+r)^-n)이에요. r은 연금리를 12로 나눈 월 이율, n은 개월 수예요. 1억 원, 연 5%, 12개월이면 8,560,748원이에요."}},{"@type":"Question","name":"만기일시상환은 언제 유리한가요?","acceptedAnswer":{"@type":"Answer","text":"월 현금흐름 부담을 낮추고 싶을 때 쓰지만 총이자가 가장 많고 만기에 원금 전체를 갚거나 재약정해야 해요. 유불리는 개인 상황과 상품 조건에 따라 달라요."}},{"@type":"Question","name":"이자는 일할 계산하지 않나요?","acceptedAnswer":{"@type":"Answer","text":"실제 대출은 대출일부터 납입일까지 일수로 이자를 계산하는 경우가 많아요. 이 계산기는 월 이율(연금리/12)로 단순화해서 은행 안내와 소액 차이가 날 수 있어요."}},{"@type":"Question","name":"변동금리도 계산되나요?","acceptedAnswer":{"@type":"Answer","text":"고정금리 기준이에요. 변동금리는 금리가 바뀐 시점의 잔액·잔여기간으로 다시 계산하면 돼요. 이 페이지에서 금리를 바꿔 다시 넣어 보세요."}},{"@type":"Question","name":"거치기간이 있으면 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"거치기간은 반영하지 않아요. 거치 중에는 이자만 내고, 이후 남은 기간으로 원금을 갚기 때문에 월 납입액이 늘어나요."}},{"@type":"Question","name":"총이자를 줄이는 방법이 있나요?","acceptedAnswer":{"@type":"Answer","text":"상환기간을 줄이거나 원금을 중도 상환하면 줄어요. 중도상환수수료 여부는 약관을 확인하세요. 이 페이지는 특정 금융상품을 권유하지 않아요."}}]}</script>
+</head><body><div class="wrap">
+<div class="top"><a class="brand" href="../">돈의 스케일<i>.</i></a><a href="../" style="font-size:13px">계산기 목록</a></div>
+<h1><em>대출 이자</em> 계산기<br>월별 상환표</h1>
+<p class="sub">원리금균등·원금균등·만기일시를 한 번에 비교하고, 선택한 방식의 월별 원금·이자·잔액을 표로 보여줘요.</p>
+<label for="pr">대출금 (원)</label><div class="field"><input id="pr" class="m" type="text" inputmode="numeric" value="300,000,000"><span>원</span></div>
+<div class="chips"><button class="chip" data-t="pr" data-v="100000000">1억</button><button class="chip" data-t="pr" data-v="200000000">2억</button><button class="chip" data-t="pr" data-v="300000000">3억</button><button class="chip" data-t="pr" data-v="500000000">5억</button></div>
+<div class="two"><div><label for="rt">연 금리 (%)</label><div class="field"><input id="rt" type="number" inputmode="decimal" step="0.01" min="0" max="30" value="4.5"><span>%</span></div></div><div><label for="yr">기간 (개월)</label><div class="field"><input id="yr" type="number" inputmode="numeric" min="1" max="600" value="360"><span>개월</span></div></div></div>
+<div class="chips"><button class="chip" data-mo="12">1년</button><button class="chip" data-mo="60">5년</button><button class="chip" data-mo="120">10년</button><button class="chip" data-mo="240">20년</button><button class="chip" data-mo="360">30년</button></div>
+<label for="mt">상환 방식</label><select id="mt"><option value="pmt">원리금균등분할상환</option><option value="principal">원금균등분할상환</option><option value="bullet">만기일시상환 (이자만 내다 만기에 원금)</option></select>
+<section class="res" id="res" aria-live="polite" hidden></section>
+<div class="src"><b>기준일 산식 고정(금리·기간은 입력값) · 2026-10-07 확인</b> · 출처 금융감독원 금융소비자 정보포털 파인(대출 상환방식 안내), 소비자 대출 약관 일반 산식
+<div class="warn">거치기간·변동금리 재산정·중도상환수수료·인지세는 반영하지 않아요 · 은행별 원 단위 절사 방식에 따라 몇 원 차이가 날 수 있어요</div></div>
+<article class="doc"><h2>계산식</h2><ul><li><b>월 이자</b> = 대출 잔액 &times; 연 금리 &divide; 12 (원 미만 절사, 월 단위 근사)</li><li><b>원리금균등</b>: 월 납입액 = 원금 &times; r &divide; (1 &minus; (1 + r)<sup>&minus;n</sup>), r = 연금리/12, n = 개월 수. 매달 같은 금액, 초반엔 이자 비중이 커요</li><li><b>원금균등</b>: 매달 갚는 원금 = 대출금 &divide; n 고정, 이자는 잔액에 따라 줄어서 첫 달 납입액이 가장 커요</li><li><b>만기일시</b>: 매달 이자만 내고 마지막 달에 원금 전액 상환</li><li>마지막 회차에서 남은 잔액을 정리해 잔액이 정확히 0원이 돼요</li></ul>
+<div class="disc" role="note"><b>꼭 읽어주세요</b> 이 페이지의 결과는 <b>참고용 추정치</b>예요. 법령·고시·요율은 바뀔 수 있고 개인 상황에 따라 실제 금액과 달라요. 세무·노무·법률 자문이 아니며 특정 금융상품·복권 구매를 권유하지 않아요. 실제 금액은 고용센터·사업장·국세청·동행복권 등 해당 기관에서 확인하세요.</div></article>
+<article class="doc"><h2>원리금균등·원금균등·만기일시, 뭐가 다르죠</h2><p>같은 금리·기간이라도 갚는 방식에 따라 총이자가 달라져요. <b>원금균등</b>은 처음부터 원금을 빨리 줄여서 총이자가 가장 적지만 첫 달 부담이 가장 커요. <b>원리금균등</b>은 매달 납입액이 같아서 가계 계획을 세우기 쉽지만 총이자는 원금균등보다 많아요. <b>만기일시</b>는 매달 이자만 내서 월 부담이 가장 작지만 원금은 그대로라 총이자가 가장 많고 만기에 큰돈이 필요해요.</p>
+<p>예를 들어 1억 원을 연 5%, 12개월 원리금균등으로 빌리면 월 8,560,748원씩 내고 총이자는 약 273만 원이에요. 3억 원을 연 4.5%, 30년으로 빌리면 원리금균등 월 약 152만 원, 총이자 약 2.47억 원이고 원금균등은 첫 달 약 195만 원에서 시작해 점점 줄어 총이자가 약 2.03억 원이에요. 위 입력값으로 바로 확인할 수 있어요.</p>
+<p>이 계산기는 금리가 고정이라고 가정해요. 변동금리 대출은 금리가 바뀔 때마다 남은 원금과 기간으로 다시 계산돼요. 거치기간이 있으면 그동안은 이자만 내고 이후 상환기간이 짧아져 월 납입액이 늘어요. 중도상환수수료, 인지세, 보증료는 별도예요. 대출 가능 금액이나 DSR 한도는 계산하지 않고, 특정 대출상품을 권유하지 않아요. 월급 중 얼마가 남는지는 <a href="../take-home/">실수령액 계산기</a>와 같이 보세요.</p></article>
+<section class="doc"><h2>자주 묻는 질문</h2><details class="faq"><summary>원리금균등과 원금균등 중 어느 쪽이 이자가 적나요?</summary><p>같은 조건이면 원금균등의 총이자가 더 적어요. 원금을 처음부터 일정하게 갚아 잔액이 빨리 줄기 때문이에요. 대신 초기 월 납입액이 더 커요.</p></details><details class="faq"><summary>원리금균등 월 납입액은 어떻게 계산하나요?</summary><p>월 납입액 = 원금 x r / (1 - (1+r)^-n)이에요. r은 연금리를 12로 나눈 월 이율, n은 개월 수예요. 1억 원, 연 5%, 12개월이면 8,560,748원이에요.</p></details><details class="faq"><summary>만기일시상환은 언제 유리한가요?</summary><p>월 현금흐름 부담을 낮추고 싶을 때 쓰지만 총이자가 가장 많고 만기에 원금 전체를 갚거나 재약정해야 해요. 유불리는 개인 상황과 상품 조건에 따라 달라요.</p></details><details class="faq"><summary>이자는 일할 계산하지 않나요?</summary><p>실제 대출은 대출일부터 납입일까지 일수로 이자를 계산하는 경우가 많아요. 이 계산기는 월 이율(연금리/12)로 단순화해서 은행 안내와 소액 차이가 날 수 있어요.</p></details><details class="faq"><summary>변동금리도 계산되나요?</summary><p>고정금리 기준이에요. 변동금리는 금리가 바뀐 시점의 잔액·잔여기간으로 다시 계산하면 돼요. 이 페이지에서 금리를 바꿔 다시 넣어 보세요.</p></details><details class="faq"><summary>거치기간이 있으면 어떻게 되나요?</summary><p>거치기간은 반영하지 않아요. 거치 중에는 이자만 내고, 이후 남은 기간으로 원금을 갚기 때문에 월 납입액이 늘어나요.</p></details><details class="faq"><summary>총이자를 줄이는 방법이 있나요?</summary><p>상환기간을 줄이거나 원금을 중도 상환하면 줄어요. 중도상환수수료 여부는 약관을 확인하세요. 이 페이지는 특정 금융상품을 권유하지 않아요.</p></details></section>
+<section class="doc"><h2>출처와 기준일</h2><ul class="srcs"><li><a href="https://fine.fss.or.kr" rel="noopener nofollow">금융감독원 파인(금융소비자 정보포털) 대출 상환방식 안내</a> <span>(열람 2026-10-07)</span></li><li><a href="https://www.kfb.or.kr" rel="noopener nofollow">은행연합회 소비자포털 대출 상환방식·중도상환수수료 안내</a> <span>(열람 2026-10-07)</span></li><li><a href="https://www.law.go.kr/법령/민법" rel="noopener nofollow">민법 제379조 (법정이율 연 5%)</a> <span>(시행 현행)</span></li><li><a href="https://www.law.go.kr/법령/이자제한법" rel="noopener nofollow">이자제한법 및 최고이자율 (연 20%)</a> <span>(시행 현행)</span></li></ul><p class="note">숫자는 위 공개 자료를 바탕으로 편집팀이 계산했어요. 최종 업데이트 2026-10-07.</p></section>
+<section class="doc"><h2>다른 계산기</h2><ul class="srcs"><li><a href="../unemployment/">실업급여 계산기</a></li><li><a href="../severance/">퇴직금 계산기</a></li><li><a href="../lotto-tax/">로또 세금 계산기</a></li><li><a href="../take-home/">월급 실수령액 계산기</a></li><li><a href="../inheritance-tax/">상속세 계산기</a></li><li><a href="../acquisition-tax/">주택 취득세 계산기</a></li><li><a href="../rent-convert/">전월세 전환율 계산기</a></li><li><a href="../health-insurance/">건강보험료 계산기</a></li></ul></section>
+<script src="../assets/calc-core.js"></script>
+<script>const $=id=>document.getElementById(id),W=n=>Math.round(n).toLocaleString("ko-KR"),num=id=>parseFloat(($(id).value||"").replace(/,/g,""))||0;
+function show(h){const r=$("res");r.innerHTML=h;r.hidden=false}
+function bind(ids,fn){ids.forEach(i=>{$(i).addEventListener("input",fn);$(i).addEventListener("change",fn)});fn()}
+const fmtI=e=>{e.value=e.value.replace(/[^\d]/g,"").replace(/\B(?=(\d{3})+(?!\d))/g,",")};document.querySelectorAll("input.m").forEach(e=>e.addEventListener("input",()=>fmtI(e)));
+document.querySelectorAll(".chip").forEach(b=>b.addEventListener("click",()=>{const t=$(b.dataset.t);t.value=W(+b.dataset.v);calc()}));
+document.querySelectorAll("[data-mo]").forEach(b=>b.addEventListener("click",()=>{$("yr").value=b.dataset.mo;calc()}));
+function calc(){const P=num("pr"),n=Math.round(num("yr")),rate=parseFloat($("rt").value)||0;if(!P||n<1||n>600){$("res").hidden=true;return}
+const o={principal:P,rate:rate/100,months:n},m=$("mt").value,all={pmt:CalcCore.loan({...o,method:"pmt"}),principal:CalcCore.loan({...o,method:"principal"}),bullet:CalcCore.loan({...o,method:"bullet"})};
+const r=all[m],nm={pmt:"원리금균등",principal:"원금균등",bullet:"만기일시"};
+const rows=r.rows.map(x=>'<tr><td>'+x.n+'</td><td>'+W(x.pay)+'</td><td>'+W(x.principal)+'</td><td>'+W(x.interest)+'</td><td>'+W(x.balance)+'</td></tr>').join("");
+const cmp=["pmt","principal","bullet"].map(k=>'<tr><td>'+nm[k]+(k===m?' *':'')+'</td><td>'+W(all[k].first)+'</td><td>'+W(all[k].totalInterest)+'</td></tr>').join("");
+show('<div class="big">'+W(r.first)+'<small>원 / 첫 달</small></div><div class="spicy">'+nm[m]+' · 총이자 '+W(r.totalInterest)+'원'+(m==="pmt"?'':' · 마지막 달 '+W(r.last)+'원')+'</div><div class="tw"><table class="t"><caption>방식별 비교</caption><thead><tr><th>방식</th><th>첫 달 납입</th><th>총이자</th></tr></thead><tbody>'+cmp+'</tbody></table></div><h3>월별 상환 스케줄</h3><div class="tw" style="max-height:420px;overflow:auto"><table class="t"><thead><tr><th>회차</th><th>납입액</th><th>원금</th><th>이자</th><th>잔액</th></tr></thead><tbody>'+rows+'</tbody></table></div><p class="note">고정금리·월 이율(연/12) 단순화 · 거치기간·수수료 제외 · 참고용. 금리를 바꿔 변동금리 시나리오도 비교해 보세요.</p>')}
+bind(["pr","rt","yr","mt"],calc);</script>
+<footer><nav aria-label="사이트 정보"><a href="../">계산기 목록</a><a href="../about/">소개</a><a href="../contact/">문의</a><a href="../privacy/">개인정보처리방침</a><a href="https://www.youtube.com/@돈의스케일" rel="noopener">YouTube</a><a href="https://www.instagram.com/money.scale.kr/" rel="noopener">Instagram</a></nav>
+<p>참고용 정보예요. 세법·보험요율·통계는 바뀔 수 있고, 투자·대출·보험 등 금융상품을 권유하지 않아요. 중요한 결정 전에는 국세청·공단·전문가에게 확인하세요.</p>
+<p>&copy; 2026 돈의 스케일 편집팀 · <a href="mailto:scienceydsus+github-moneyscale@gmail.com">scienceydsus+github-moneyscale@gmail.com</a></p></footer>
+</div>
+</body></html>
